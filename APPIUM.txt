@@ -1,0 +1,20 @@
+set ANDROID_SWT=C:\SDK\sdk-tools-windows-4333796\tools\lib\x86_64
+echo %ANDROID_SWT%
+
+echo GHETTO NOGGAR RAGGED OVERRIDE ANDROID_SWT
+set ANDROID_SWT=C:\SDK\sdk-tools-windows-4333796\tools\lib\monitor-x86_64
+echo %ANDROID_SWT%
+
+adb kill-server
+  adb tcpip 5555
+  adb connect YourDeviceIpAddress(e.g 192.168.0.27, you could ensure it via viewing device configuration)
+
+
+"C:\Program Files\Java\jdk1.8.0_191\";"C:\Program Files\Java\jdk1.8.0_191\bin";"C:\Program Files\Java\jdk1.8.0_191;C:\Program Files (x86)\Java\jre7\bin;C:\Program Files (x86)\Java\jre7;C:\Program Files (x86)\Java\jdk1.7.0";"C:\Program Files (x86)\Java\jdk1.7.0\bin"
+
+C:\Program Files\Java\jdk1.8.0_191\bin
+sdkmanager – -list
+
+
+
+
