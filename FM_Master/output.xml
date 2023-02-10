@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20230201 18:46:22.422" generator="Robot 3.2.1 (Python 2.7.18 on win32)">
+<suite source="C:\AecorAutomation\FM_Master\Fleet_Mastr_Unit_TC_Web.robot" id="s1" name="Fleet Mastr Unit TC Web">
+<test id="s1-t1" name="Report Incident page">
+<kw name="Log in into Fleet Mastr">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20230201 18:46:32.825" level="INFO">Opening browser 'gc' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20230201 18:46:35.570" starttime="20230201 18:46:32.825"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20230201 18:46:37.585" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20230201 18:46:37.585" starttime="20230201 18:46:35.571"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${FleetmastrQA}</arg>
+</arguments>
+<msg timestamp="20230201 18:46:37.587" level="INFO">Opening url 'https://uat-skanska.fleetmastr.com/'</msg>
+<status status="PASS" endtime="20230201 18:46:43.337" starttime="20230201 18:46:37.586"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20230201 18:46:46.339" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20230201 18:46:46.339" starttime="20230201 18:46:43.338"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var el = document.createElement("div"); \ el.setAttribute("style","position:fixed;top:20%;left:35%;background-color:yellow;font-size: 20px;height: 50px;width: 250px;"); \ el.innerHTML ="Login to fleetmastr...!";document.body.appendChild(el);</arg>
+</arguments>
+<msg timestamp="20230201 18:46:46.340" level="INFO">Executing JavaScript:
+var el = document.createElement("div");  el.setAttribute("style","position:fixed;top:20%;left:35%;background-color:yellow;font-size: 20px;height: 50px;width: 250px;");  el.innerHTML ="Login to fleetmastr...!";document.body.appendChild(el);</msg>
+<status status="PASS" endtime="20230201 18:46:46.354" starttime="20230201 18:46:46.339"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20230201 18:46:48.359" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20230201 18:46:48.359" starttime="20230201 18:46:46.354"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${UsernameTB}</arg>
+<arg>${UserID}</arg>
+</arguments>
+<msg timestamp="20230201 18:46:48.360" level="INFO">Typing text 'admin@imastr.com' into text field '//input[@type="text"]'</msg>
+<status status="PASS" endtime="20230201 18:46:48.592" starttime="20230201 18:46:48.359"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20230201 18:46:49.597" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20230201 18:46:49.597" starttime="20230201 18:46:48.592"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PasswordTB}</arg>
+<arg>${UserPWD}</arg>
+</arguments>
+<msg timestamp="20230201 18:46:49.599" level="INFO">Typing text 'aecor2021' into text field '//input[@type="password"]'</msg>
+<status status="PASS" endtime="20230201 18:46:50.190" starttime="20230201 18:46:49.598"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20230201 18:46:51.191" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20230201 18:46:51.192" starttime="20230201 18:46:50.191"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${LoginBTN}</arg>
+</arguments>
+<msg timestamp="20230201 18:46:51.194" level="INFO">Clicking element '//*[@id="register-submit-btn"]'.</msg>
+<status status="PASS" endtime="20230201 18:46:59.148" starttime="20230201 18:46:51.193"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230201 18:47:04.151" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20230201 18:47:04.151" starttime="20230201 18:46:59.148"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var el = document.createElement("div"); \ el.setAttribute("style","position:fixed;top:20%;left:35%;background-color:yellow;font-size: 20px;height: 50px;width: 250px;"); \ el.innerHTML ="Welcome User...!";document.body.appendChild(el);</arg>
+</arguments>
+<msg timestamp="20230201 18:47:04.153" level="INFO">Executing JavaScript:
+var el = document.createElement("div");  el.setAttribute("style","position:fixed;top:20%;left:35%;background-color:yellow;font-size: 20px;height: 50px;width: 250px;");  el.innerHTML ="Welcome User...!";document.body.appendChild(el);</msg>
+<status status="PASS" endtime="20230201 18:47:04.179" starttime="20230201 18:47:04.152"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20230201 18:47:06.188" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20230201 18:47:06.189" starttime="20230201 18:47:04.179"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20230201 18:47:06.350" starttime="20230201 18:47:06.189"></status>
+</kw>
+<status status="PASS" endtime="20230201 18:47:06.351" starttime="20230201 18:46:32.824"></status>
+</kw>
+<kw name="Create Report Incident">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${ReportIncidentPage}</arg>
+</arguments>
+<msg timestamp="20230201 18:47:06.355" level="INFO">Opening url 'https://uat-skanska.fleetmastr.com/incidents'</msg>
+<status status="PASS" endtime="20230201 18:47:07.715" starttime="20230201 18:47:06.354"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230201 18:47:12.724" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20230201 18:47:12.725" starttime="20230201 18:47:07.716"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${AddNewIncidentBTN}</arg>
+</arguments>
+<msg timestamp="20230201 18:47:12.726" level="INFO">Clicking element '//*[@id="showIncidentReportModal"]'.</msg>
+<status status="PASS" endtime="20230201 18:47:12.853" starttime="20230201 18:47:12.725"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20230201 18:47:15.854" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20230201 18:47:15.854" starttime="20230201 18:47:12.853"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var el = document.createElement("div"); \ el.setAttribute("style","position:fixed;top:20%;left:35%;background-color:yellow;font-size: 20px;height: 50px;width: 250px;"); \ el.innerHTML ="Creating new incident...!";document.body.appendChild(el);</arg>
+</arguments>
+<msg timestamp="20230201 18:47:15.857" level="INFO">Executing JavaScript:
+var el = document.createElement("div");  el.setAttribute("style","position:fixed;top:20%;left:35%;background-color:yellow;font-size: 20px;height: 50px;width: 250px;");  el.innerHTML ="Creating new incident...!";document.body.appendChild(el);</msg>
+<status status="PASS" endtime="20230201 18:47:15.871" starttime="20230201 18:47:15.855"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20230201 18:47:16.879" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20230201 18:47:16.879" starttime="20230201 18:47:15.871"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${CreateNewIncidentReg}</arg>
+</arguments>
+<msg timestamp="20230201 18:47:16.881" level="INFO">Clicking element '//*[@id="s2id_incident_registration"]/a'.</msg>
+<status status="PASS" endtime="20230201 18:47:17.026" starttime="20230201 18:47:16.880"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20230201 18:47:20.041" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20230201 18:47:20.042" starttime="20230201 18:47:17.027"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>BTQA123</arg>
+</arguments>
+<status status="PASS" endtime="20230201 18:47:20.163" starttime="20230201 18:47:20.042"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20230201 18:47:21.177" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20230201 18:47:21.177" starttime="20230201 18:47:20.164"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ENTER}</arg>
+</arguments>
+<status status="PASS" endtime="20230201 18:47:21.189" starttime="20230201 18:47:21.178"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20230201 18:47:24.193" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20230201 18:47:24.194" starttime="20230201 18:47:21.190"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${DateandTimeIcon}</arg>
+</arguments>
+<msg timestamp="20230201 18:47:24.195" level="INFO">Clicking element '//*[@class="input-group-btn"]'.</msg>
+<status status="PASS" endtime="20230201 18:47:24.297" starttime="20230201 18:47:24.194"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20230201 18:47:26.306" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20230201 18:47:26.307" starttime="20230201 18:47:24.297"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${SelectDateOfIncident}</arg>
+</arguments>
+<msg timestamp="20230201 18:47:26.308" level="INFO">Clicking element 'xpath=/html/body/div[9]/div[3]/table/tbody/tr[2]/td[6]'.</msg>
+<status status="PASS" endtime="20230201 18:47:26.395" starttime="20230201 18:47:26.307"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20230201 18:47:29.407" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20230201 18:47:29.407" starttime="20230201 18:47:26.395"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${SelectTimeofIncident}</arg>
+</arguments>
+<msg timestamp="20230201 18:47:29.409" level="INFO">Clicking element 'xpath=/html/body/div[9]/div[2]/table/tbody/tr/td/span[15]'.</msg>
+<status status="PASS" endtime="20230201 18:47:29.511" starttime="20230201 18:47:29.408"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20230201 18:47:32.514" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20230201 18:47:32.514" starttime="20230201 18:47:29.511"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${SelectMinutesofIncident}</arg>
+</arguments>
+<msg timestamp="20230201 18:47:32.515" level="INFO">Clicking element 'xpath=/html/body/div[9]/div[1]/table/tbody/tr/td/span[11]'.</msg>
+<status status="PASS" endtime="20230201 18:47:32.618" starttime="20230201 18:47:32.514"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20230201 18:47:35.632" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20230201 18:47:35.632" starttime="20230201 18:47:32.618"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${TypeOfIncident}</arg>
+</arguments>
+<msg timestamp="20230201 18:47:35.634" level="INFO">Clicking element '//*[@id="s2id_incident_type"]'.</msg>
+<status status="PASS" endtime="20230201 18:47:35.760" starttime="20230201 18:47:35.633"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20230201 18:47:38.769" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20230201 18:47:38.769" starttime="20230201 18:47:35.761"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ENTER}</arg>
+</arguments>
+<status status="PASS" endtime="20230201 18:47:38.782" starttime="20230201 18:47:38.770"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20230201 18:47:41.792" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20230201 18:47:41.792" starttime="20230201 18:47:38.783"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Classification}</arg>
+</arguments>
+<msg timestamp="20230201 18:47:41.794" level="INFO">Clicking element '//*[@id="s2id_classification"]/a'.</msg>
+<status status="PASS" endtime="20230201 18:47:41.931" starttime="20230201 18:47:41.793"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20230201 18:47:44.936" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20230201 18:47:44.936" starttime="20230201 18:47:41.932"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ENTER}</arg>
+</arguments>
+<status status="PASS" endtime="20230201 18:47:44.949" starttime="20230201 18:47:44.937"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20230201 18:47:47.965" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20230201 18:47:47.966" starttime="20230201 18:47:44.950"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${ReportedtoInsurance}</arg>
+</arguments>
+<msg timestamp="20230201 18:47:47.968" level="INFO">Clicking element '//*[@id="addIncidentReport"]/div[2]/div/div/div[5]/div/div/div[2]/label'.</msg>
+<status status="PASS" endtime="20230201 18:47:48.069" starttime="20230201 18:47:47.967"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20230201 18:47:51.083" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20230201 18:47:51.083" starttime="20230201 18:47:48.069"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{TAB}</arg>
+</arguments>
+<status status="PASS" endtime="20230201 18:47:51.097" starttime="20230201 18:47:51.084"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20230201 18:47:54.111" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20230201 18:47:54.112" starttime="20230201 18:47:51.098"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ENTER}</arg>
+</arguments>
+<status status="PASS" endtime="20230201 18:47:54.126" starttime="20230201 18:47:54.112"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230201 18:47:59.127" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20230201 18:47:59.128" starttime="20230201 18:47:54.126"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>C:\\Users\\my\\Desktop\\6277.xlsx</arg>
+</arguments>
+<status status="PASS" endtime="20230201 18:47:59.485" starttime="20230201 18:47:59.128"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20230201 18:48:01.490" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20230201 18:48:01.490" starttime="20230201 18:47:59.485"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ENTER}</arg>
+</arguments>
+<status status="PASS" endtime="20230201 18:48:01.502" starttime="20230201 18:48:01.490"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230201 18:48:06.517" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20230201 18:48:06.517" starttime="20230201 18:48:01.502"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${IncidentUploadBTN}</arg>
+</arguments>
+<msg timestamp="20230201 18:48:06.519" level="INFO">Clicking element '//*[@id="upload-media-modal-table"]/tbody/tr/td[3]/button[2]'.</msg>
+<status status="PASS" endtime="20230201 18:48:06.627" starttime="20230201 18:48:06.518"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230201 18:48:11.636" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20230201 18:48:11.636" starttime="20230201 18:48:06.627"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${IncidentSaveBTN}</arg>
+</arguments>
+<msg timestamp="20230201 18:48:11.638" level="INFO">Clicking element '//*[@id="addIncidentReportSave"]'.</msg>
+<status status="PASS" endtime="20230201 18:48:11.762" starttime="20230201 18:48:11.637"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Incident List</arg>
+</arguments>
+<msg timestamp="20230201 18:48:11.814" level="INFO">Current page contains text 'Incident List'.</msg>
+<status status="PASS" endtime="20230201 18:48:11.814" starttime="20230201 18:48:11.762"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20230201 18:48:14.828" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20230201 18:48:14.828" starttime="20230201 18:48:11.815"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${ViewIncidentIcon}</arg>
+</arguments>
+<msg timestamp="20230201 18:48:14.830" level="INFO">Clicking element '//*[@class="jv-icon jv-find-doc text-decoration icon-big"]'.</msg>
+<status status="PASS" endtime="20230201 18:48:16.031" starttime="20230201 18:48:14.829"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230201 18:48:21.035" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20230201 18:48:21.036" starttime="20230201 18:48:16.032"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>${IncidentNo}</arg>
+</arguments>
+<assign>
+<var>${Incient No}</var>
+</assign>
+<msg timestamp="20230201 18:48:21.081" level="INFO">${Incient No} = 30</msg>
+<status status="PASS" endtime="20230201 18:48:21.081" starttime="20230201 18:48:21.036"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${Incient No}</arg>
+</arguments>
+<msg timestamp="20230201 18:48:21.082" level="INFO">${Incient No} = 30</msg>
+<status status="PASS" endtime="20230201 18:48:21.082" starttime="20230201 18:48:21.082"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Incient No}</arg>
+</arguments>
+<msg timestamp="20230201 18:48:21.083" level="INFO">30</msg>
+<status status="PASS" endtime="20230201 18:48:21.083" starttime="20230201 18:48:21.083"></status>
+</kw>
+<status status="PASS" endtime="20230201 18:48:21.083" starttime="20230201 18:47:06.352"></status>
+</kw>
+<kw name="Search Incident report">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${ReportIncidentPage}</arg>
+</arguments>
+<msg timestamp="20230201 18:48:21.085" level="INFO">Opening url 'https://uat-skanska.fleetmastr.com/incidents'</msg>
+<status status="PASS" endtime="20230201 18:48:22.041" starttime="20230201 18:48:21.085"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230201 18:48:27.049" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20230201 18:48:27.049" starttime="20230201 18:48:22.041"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var el = document.createElement("div"); \ el.setAttribute("style","position:fixed;top:10%;left:35%;background-color:yellow;font-size: 20px;height: 50px;width: 350px;"); \ el.innerHTML ="Performing Incident search functionality...!";document.body.appendChild(el);</arg>
+</arguments>
+<msg timestamp="20230201 18:48:27.051" level="INFO">Executing JavaScript:
+var el = document.createElement("div");  el.setAttribute("style","position:fixed;top:10%;left:35%;background-color:yellow;font-size: 20px;height: 50px;width: 350px;");  el.innerHTML ="Performing Incident search functionality...!";document.body.appendChild(el);</msg>
+<status status="PASS" endtime="20230201 18:48:27.074" starttime="20230201 18:48:27.050"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20230201 18:48:28.089" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20230201 18:48:28.089" starttime="20230201 18:48:27.075"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${VSRegistrationTB}</arg>
+</arguments>
+<msg timestamp="20230201 18:48:28.090" level="INFO">Clicking element '//div[@id='s2id_registration']'.</msg>
+<status status="PASS" endtime="20230201 18:48:28.232" starttime="20230201 18:48:28.089"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>BTQA123</arg>
+</arguments>
+<status status="PASS" endtime="20230201 18:48:28.351" starttime="20230201 18:48:28.233"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20230201 18:48:30.364" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20230201 18:48:30.364" starttime="20230201 18:48:28.352"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Press Key</arg>
+</arguments>
+<status status="PASS" endtime="20230201 18:48:30.365" starttime="20230201 18:48:30.365"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ENTER}</arg>
+</arguments>
+<status status="PASS" endtime="20230201 18:48:30.377" starttime="20230201 18:48:30.365"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20230201 18:48:32.391" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20230201 18:48:32.391" starttime="20230201 18:48:30.378"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${DefectSearchBTN}</arg>
+</arguments>
+<msg timestamp="20230201 18:48:32.392" level="INFO">Clicking element '//button[@class="btn btn-h-45 red-rubine pull-left js-quick-search-btn"]'.</msg>
+<status status="PASS" endtime="20230201 18:48:32.514" starttime="20230201 18:48:32.391"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Glass damage</arg>
+</arguments>
+<msg timestamp="20230201 18:48:32.556" level="INFO">Current page contains text 'Glass damage'.</msg>
+<status status="PASS" endtime="20230201 18:48:32.556" starttime="20230201 18:48:32.515"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${DefectSearchClearBTN}</arg>
+</arguments>
+<msg timestamp="20230201 18:48:32.558" level="INFO">Clicking element '//button[@id="vehicle-registration"]'.</msg>
+<status status="PASS" endtime="20230201 18:48:33.058" starttime="20230201 18:48:32.557"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20230201 18:48:36.067" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20230201 18:48:36.067" starttime="20230201 18:48:33.059"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${EnterIncidentIDTB}</arg>
+</arguments>
+<msg timestamp="20230201 18:48:36.069" level="INFO">Clicking element '//*[@id="incident_id"]'.</msg>
+<status status="PASS" endtime="20230201 18:48:36.175" starttime="20230201 18:48:36.068"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20230201 18:48:39.176" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20230201 18:48:39.176" starttime="20230201 18:48:36.175"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>${Incient No}</arg>
+</arguments>
+<status status="PASS" endtime="20230201 18:48:39.200" starttime="20230201 18:48:39.177"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20230201 18:48:42.208" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20230201 18:48:42.209" starttime="20230201 18:48:39.200"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${DefectSearchBTN}</arg>
+</arguments>
+<msg timestamp="20230201 18:48:42.211" level="INFO">Clicking element '//button[@class="btn btn-h-45 red-rubine pull-left js-quick-search-btn"]'.</msg>
+<status status="PASS" endtime="20230201 18:48:42.313" starttime="20230201 18:48:42.210"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20230201 18:48:44.327" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20230201 18:48:44.327" starttime="20230201 18:48:42.313"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Glass damage</arg>
+</arguments>
+<msg timestamp="20230201 18:48:44.348" level="INFO">Current page contains text 'Glass damage'.</msg>
+<status status="PASS" endtime="20230201 18:48:44.348" starttime="20230201 18:48:44.328"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${DefectSearchClearBTN}</arg>
+</arguments>
+<msg timestamp="20230201 18:48:44.349" level="INFO">Clicking element '//button[@id="vehicle-registration"]'.</msg>
+<status status="PASS" endtime="20230201 18:48:44.427" starttime="20230201 18:48:44.348"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20230201 18:48:47.428" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20230201 18:48:47.428" starttime="20230201 18:48:44.427"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${CreatedByTB}</arg>
+</arguments>
+<msg timestamp="20230201 18:48:47.430" level="INFO">Clicking element '//*[@id="s2id_created_by"]'.</msg>
+<status status="PASS" endtime="20230201 18:48:47.559" starttime="20230201 18:48:47.429"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20230201 18:48:50.566" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20230201 18:48:50.567" starttime="20230201 18:48:47.559"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>a support</arg>
+</arguments>
+<status status="PASS" endtime="20230201 18:48:50.665" starttime="20230201 18:48:50.567"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20230201 18:48:52.675" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20230201 18:48:52.675" starttime="20230201 18:48:50.666"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>{ENTER}</arg>
+</arguments>
+<status status="PASS" endtime="20230201 18:48:52.689" starttime="20230201 18:48:52.676"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20230201 18:48:54.699" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20230201 18:48:54.699" starttime="20230201 18:48:52.689"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${DefectSearchBTN}</arg>
+</arguments>
+<msg timestamp="20230201 18:48:54.702" level="INFO">Clicking element '//button[@class="btn btn-h-45 red-rubine pull-left js-quick-search-btn"]'.</msg>
+<status status="PASS" endtime="20230201 18:48:54.806" starttime="20230201 18:48:54.700"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Glass damage</arg>
+</arguments>
+<msg timestamp="20230201 18:48:54.835" level="INFO">Current page contains text 'Glass damage'.</msg>
+<status status="PASS" endtime="20230201 18:48:54.836" starttime="20230201 18:48:54.806"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${DefectSearchClearBTN}</arg>
+</arguments>
+<msg timestamp="20230201 18:48:54.837" level="INFO">Clicking element '//button[@id="vehicle-registration"]'.</msg>
+<kw name="Capture Page Screenshot">
+<msg timestamp="20230201 18:48:55.924" level="FAIL">Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<status status="FAIL" endtime="20230201 18:48:55.924" starttime="20230201 18:48:55.924"></status>
+</kw>
+<msg timestamp="20230201 18:48:55.924" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<msg timestamp="20230201 18:48:55.946" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button class="btn grid-clear-btn btn-h-45 grey-gallery " id="vehicle-registration" style="margin-right: 0"&gt;...&lt;/button&gt; is not clickable at point (1223, 179). Other element would receive the click: &lt;div id="processingModal" class="modal fade bs-example-modal-sm default-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: block; margin-top: 0px;"&gt;...&lt;/div&gt;
+  (Session info: chrome=109.0.5414.120)
+</msg>
+<status status="FAIL" endtime="20230201 18:48:55.946" starttime="20230201 18:48:54.836"></status>
+</kw>
+<status status="FAIL" endtime="20230201 18:48:55.947" starttime="20230201 18:48:21.084"></status>
+</kw>
+<doc>Dashboard
+--------------------------
+Verify basic functionality of Dashboard page.
+-------------------------
+Total Run Time:
+00:09:02</doc>
+<tags>
+<tag>SmokeTest</tag>
+</tags>
+<status status="FAIL" endtime="20230201 18:48:55.947" critical="yes" starttime="20230201 18:46:32.822">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button class="btn grid-clear-btn btn-h-45 grey-gallery " id="vehicle-registration" style="margin-right: 0"&gt;...&lt;/button&gt; is not clickable at point (1223, 179). Other element would receive the click: &lt;div id="processingModal" class="modal fade bs-example-modal-sm default-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: block; margin-top: 0px;"&gt;...&lt;/div&gt;
+  (Session info: chrome=109.0.5414.120)
+</status>
+</test>
+<status status="FAIL" endtime="20230201 18:48:55.959" starttime="20230201 18:46:22.427"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">SmokeTest</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Fleet Mastr Unit TC Web" pass="0">Fleet Mastr Unit TC Web</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230201 18:48:55.924" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+</errors>
+</robot>
