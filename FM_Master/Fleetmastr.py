@@ -30,6 +30,12 @@ FleetPlanningpage   =   "https://uat-"+client+".fleetmastr.com/fleet_planning"
 Messagespage        =   "https://uat-"+client+".fleetmastr.com/messages"
 Workshops           =   "https://uat-"+client+".fleetmastr.com/workshops"
 UserManagement      =   "https://uat-"+client+".fleetmastr.com/users"
+VehicleCheksPage    =   "https://uat-"+client+".fleetmastr.com/checks"
+Reportspage         =   "https://uat-"+client+".fleetmastr.com/reports"
+
+
+
+
 #=========website========================
 
 UsernameTB          =   '//input[@type="text"]'
@@ -234,13 +240,14 @@ VSManufacturerCB        =   "//div[@id='uniform-col_manufacturer']"
 VSmodelCB               =   "//div[@id='uniform-col_model']"
 VSStatusCB              =   "//div[@id='uniform-col_status']"
 VSCheckCB               =   "//div[@id='uniform-col_checkid']"
+VSCheckCB               =   "//div[@id='uniform-col_checkid']"
 VSCheckedByCB           =   "//div[@id='uniform-col_createdBy']"
 VSCreatedByCB           =   "//div[@id='uniform-col_createdBy']"
 ColumnMGTCloseBTN       =   "//a[@id='dData']"
 DownlloadPDFIcon        =   '//span[@class="m5 jv-icon jv-download"]'
 
 #==================Vehicle Defect page==================================
-AddeNewDefectBTN        =   "//a[@href='https://uat-'+client+'.fleetmastr.com/checks/create']"
+AddeNewDefectBTN        =   "//a[@href='https://uat-"+client+".fleetmastr.com/checks/create']"
 OdometerTB              =   "//input[@id='odometer-reading']"
 TrailerattachedDD       =   "xpath=/html/body/div[2]/div[2]/div/section/div[3]/div[1]/div/div[2]/div/div/div[3]/div/div/a"
 TrailerattachedDDVal    =   "//div[contains(text(),'No')]"
@@ -456,9 +463,206 @@ UMEditLastnameTB    =   "xpath=/html/body/div[9]/div/form/div[2]/div/div[2]/div[
 UMEditJobTitleTB    =   "xpath=/html/body/div[9]/div/form/div[2]/div/div[2]/div[2]/div/div/div/div[1]/div[5]/div/input"
 UMEditUpdateBTN     =   "xpath=/html/body/div[9]/div/form/div[3]/div/div/button[2]"
 UMDeleteIcon        =   "//a[@class='btn btn-xs grey-gallery edit-timesheet tras_btn js-user-disable-btn']"
-UMDeleteConfirmBTN      =   "Xpath=/html/body/div[9]/div/div/div/div[3]/button[2]"
+UMDeleteConfirmBTN      =   '//button[@data-bb-handler="confirm"]'
 UMCluear1BTN        =   '//*[@id="defects-filter-form"]/div/div/div/div[3]/div/div[2]/div/div/button[2]'
 UMSjowinactiveuserCB    =   '//*[@id="show_deleted_users"]'
+
+#============Vehicle checks(VC)==========================
+VCVehicleRegDD          =   "xpath=.//span[contains(normalize-space(.), 'Vehicle registration')]"
+VCVehicleRegVal         =   "xpath=(.//span[contains(normalize-space(.), 'Please enter 1 or more character')]/following::input[@type='text'])[last()]"
+VCVEhicleReg            =   "xpath=(.//span[contains(., 'FJ61GWN')])[1]"
+VCSearchBTN             =   "xpath=.//button[contains(., '')][@type='submit']"
+VCClearBTN              =   "//button[@class='btn grid-clear-btn btn-h-45 grey-gallery ']"
+VCADVAllRegionDD        =   "xpath=.//span[contains(normalize-space(.), 'All regions')]"
+VCADVAllRegionVal       =   "xpath=(.//div[contains(normalize-space(.), 'Bristol')])[last()]"
+VCADVClearBTN           =   "//*[@class='btn grid-clear-btn btn-h-45 grey-gallery']"
+VCADVSearchcheckDD      =   '//*[@id="select2-chosen-5"]'
+VCADVSelectcheckResult  =   "xpath=.//span[contains(normalize-space(.), 'Select check result')]"
+VCADVSelectcheckResultval  =   "xpath=(.//div[contains(normalize-space(.), 'Unsafe to operate')])[last()]"
+VCADVDateDD             =   "xpath=.//input[@placeholder='Date'][@type='text']"
+VDADVDateVal            =   "xpath=.//li[contains(normalize-space(.), 'Last 7 days')]"
+VCTypeCB                =   "xpath=(.//label[contains(., 'Type')]/following::input[@type='checkbox'])[1]"
+VCVehicleStatusCB       =   "xpath=(.//label[contains(normalize-space(.), 'Vehicle Status')]/following::input[@type='checkbox'])[1]"
+VCCheckResultCB         =   "xpath=(.//label[contains(normalize-space(.), 'Check Result')]/following::input[@type='checkbox'])[1]"
+VCRegionCB              =   "xpath=(.//label[contains(., 'Region')]/following::input[@type='checkbox'])[1]"
+VCOdometerCB            =   "xpath=(.//label[contains(., 'Odometer')]/following::input[@type='checkbox'])[1]"
+VCModelCB               =   "xpath=(.//label[contains(., 'Model')]/following::input[@type='checkbox'])[1]"
+VCSubmitBTN             =   "xpath=.//a[contains(., 'Submit')]"
+VCViewVehiclecheck      =   "xpath=((.//td[contains(normalize-space(.), 'A Support')])[1]/following::i)[1]"
+VCExportVehilecheck     =   "xpath=.//a[contains(normalize-space(.), 'Export vehicle check')]"
+VCEditVehiclecheckBTN   =   "xpath=.//button[contains(normalize-space(.), 'Edit vehicle check')]"
+VCLeaks                 =   "xpath=(.//div[contains(., 'Leaks')])[8]"
+VCLeakEditBTN           =   '//*[@id="checks-page"]/div[3]/div/div[2]/div/div[2]/div/div[1]/div/div/div[5]/p/button'
+VCDefectBTN             =   "xpath=.//button[contains(., 'Defect')][@type='button']"
+VCUploadBTN             =   "xpath=.//button[contains(normalize-space(.), 'Upload image')][@type='button']"
+VCDefectcommentModel       =   '//*[@id="edit-modal"]/div/div/div[2]/form/div/div[6]/div/textarea'
+VCEditDefectSaveBTN     =   '//*[@id="edit-modal"]/div/div/div[3]/div/button[2]'
+VCEditDefectNodefect    =   "xpath=.//button[contains(normalize-space(.), 'No defect')][@type='button']"
+
+#=================Reports==============================================
+ReportsSearchbtnameTB   =   '//*[@id="quickSearchInputReport"]'
+ReprotsSearchBTN        =   '//*[@class="jv-icon jv-search"]'
+ReportViewBTN           =   '//*[@class="btn btn-xs grey-gallery tras_btn js-download-report-btn"]'
+ReportDownloadBTN       =   '//*[@id="saveDownloadReport"]/div[3]/div[1]/div/div/button'
+DownloadTab             =   '//*[@id="downloads_tab"]/a'
+DownloadSearchbtnameTB  =   '//*[@id="quickSearchInputForDownload"]'
+DownloadsSearchBTN      =    '//*[@id="custom-reports-download-filter-form"]/div/div/div/div/div[2]/div/div/button[1]'
+ActionDownloadicon      =   '//a[@title="Download"]'
+ACtionDeleteicon        =   '//a[@title="Delete"]'
+ActionDeleteYesBTN      =   "//button[@data-bb-handler='confirm']"
+DownlaodEditicon        =   "//*[@class='btn btn-xs grey-gallery tras_btn']"
+EditReportname          =   '//*[@id="report_name"]'
+EditDescription         =   '//*[@id="report_description"]'
+EditFirstChekbox        =   '//*[@id="report_users"]/div/div[1]/table/tbody/tr[1]/td[1]/div/label/div/span/input'
+EditNextBTN             =   '//*[@id="btnSaveCustomReport"]'
+EditGeneratereport      =   '//*[@id="btnSubmitCustomReport"]'
+DateRangeDD             =   '//*[@id="date_range"]'
+DateRangeToday          =   "//li[@data-range-key='Today']"
+Reportstab              =   '//*[@id="reports_tab"]'
+##################################=============================================
+
+#=================Asset=========================
+
+Asseturl = "https://uat-shl.fleetmastr.com/login"
+Username = "//input[@name='identity']"
+Password = "//input[@id='register_password']"
+PassValue = "aecor2021"
+Loginbutton = "//button[contains(text(),'Login')]"
+AssetProfilePage = "https://uat-shl.fleetmastr.com/asset_profiles"
+AddAssetProfile = "https://uat-shl.fleetmastr.com/asset_profiles/create"
+AssetType = "//input[@id='title']"
+#AssetTypeText = "AecorProfile"
+AssetCategory = "//div[@id='s2id_category_id']"
+SelectAssetCategory = "//div[contains(text(),'Trailers')]"
+AssetSubCategory = "//div[@id='s2id_category_type_id']"
+SelectAssetSubCategory = "//div[contains(text(),'Small trailer')]"
+ChangeAssetSubCategory = "//div[contains(text(),'Large trailer')]"
+AssetProfileC02 = "//input[@id='co2']"
+AssetADRTestInterval = "//div[@id='s2id_adr_test_interval']"
+AssetADRTestIntervalValue = "//div[contains(text(),'None')]"
+AssetPMIInterval = "//div[@id='s2id_pmi_interval']"
+#AssetPMIIntervalValue = ""
+AssetRubberIntegrityTestInterval = "//div[@id='s2id_rubber_integrity_test_interval']"
+AssetTankTestInterval = "//div[@id='s2id_tank_test_interval']"
+AssetOdometerSetting = "//div[@id='s2id_odometer_type']"
+OdometerSettingOption = "//div[contains(text(),'KM')]"
+AssetManufacturer = "//input[@id='manufacturer']"
+AssetManufacturerText = 'Aecor'
+AssetModel = "//input[@id='model']"
+AssetModelText = 'AecorTestModel'
+AssetFuelType = "//div[@id='s2id_fuel_type']"
+SelectAssetFuelType = "//div[contains(text(),'Petrol')]"
+AssetEngineType = "//div[@id='s2id_engine_type']"
+AssetServiceFrequency = "//div[@id='s2id_service_inspection_frequency']"
+SelectAssetServiceFrequency = "//div[contains(text(),'12 weeks')]"
+AssetCreationSubmit = "//button[@id='submit-button']"
+AssetSearchFilter = "//div[@id='s2id_profileTitle']"
+AssetSearchInputField = "//input[@id='s2id_autogen3_search']"
+AssetSearchInputField2 = "//input[@id='s2id_autogen4_search']"
+AssetClearSearch = "//*[@id='asset-profiles-form']/div/div/div/div[2]/div/div/button[2]"
+ArchivedAssetProfile = "//span[contains(text(),'Show archived asset profiles')]"
+ArchivedStatusItem = "//span[contains(text(),'Archived')]"
+
+
+AssetColumnType = "//div[@id='uniform-col_title']"
+AssetColumnCategory = "//div[@id='uniform-col_asset_category']"
+AssetColumnSubCategory = "//div[@id='uniform-col_asset_type']"
+AssetColumnManufacturer = "//div[@id='uniform-col_manufacturer']"
+AssetColumnModel = "//div[@id='uniform-col_model']"
+AssetColumnFuelType = "//div[@id='uniform-col_fuel_type']"
+AssetColumnModelProfileStatus = "//div[@id='uniform-col_profile_status']"
+EditTable1 = "//table[@class='EditTable']"
+EditTable2 = "//td[@class='ColButton EditButton']"
+AssetColumnSubmit = "//a[@id='dData']"
+
+AssetRefresh = "//span[@class='m5 jv-icon jv-reload']"
+AssetDownload = "//Span[@class='m5 jv-icon jv-download']"
+AssetProfileDetails = "//a[@title='Details']"
+AssetProfileEdit = "//a[@title='Edit']"
+
+
+AssetSearchurl = "https://uat-shl.fleetmastr.com/assets"
+AssetAdd = "//a[@href='https://uat-shl.fleetmastr.com/assets/create']"
+AssetNumber = "//input[@id='serial_number']"
+AssetTypeSelection = "//div[@id='s2id_asset_profile_id']"
+AssetTypeValueSelection = "//option[contains(text(),'${AssetName}')]"
+AssetStatus = "//div[@id='s2id_status']"
+AssetStatusValue = "//div[contains(text(),'Roadworthy')]"
+AssetAvailability = "//div[@id='s2id_availability']"
+AssetAvailabilityValue = "//div[contains(text(),'Available')]"
+AssetOwnershipStatus = "//div[@id='s2id_ownership_type']"
+AssetOwnershipStatusValue = "//div[contains(text(),'Owned')]"
+AssetNNRMCompliant = "//div[@id='s2id_nrmm_complaint']"
+AssetNNRMCompliantValue = "//div[contains(text(),'No')]"
+AssetDivision = "//div[@id='s2id_asset_division_id']"
+#//input[@class='select2-input' and @id='s2id_autogen16_search']
+AssetDivisionValue = "//div[contains(text(),'SHL')]"
+AssetRegion = "//div[@id='s2id_asset_region_id']"
+AssetRegionValue = "//div[contains(text(),'Manchester')]"
+AssetSubmit = "//button[@id='saveAssetBtn']"
+AssetQuickSearchButton = "//a[contains(text(),'Quick Search')]"
+AssetQuickSearchNumber = "//div[@id='s2id_serial_number']"
+AssetQuickSearchNumberField = "//input[@id='s2id_autogen2_search']"
+AssetExist = "//a[contains(text(),'${AssetNumberValue}')]"
+AssetQuickSearchClearFilter = "//button[@class='btn js-asset-grid-clear-btn btn-h-44 grey-gallery ' and @type='button']"
+AssetAdvanceSearchClearFilter = "//button[@class='btn btn-h-44 grey-gallery clearAssetGrid ' and @type='button']"
+AssetAdvanceSearchButton = "//a[contains(text(),'Advanced Search')]"
+AssetAdvanceSearchType = "//div[@id='s2id_type']"
+AssetAdvanceSearchTypeField = "//input[@id='s2id_autogen8_search']"
+AssetAdvanceSearchAssertion = "//a[contains(text(),'${AssetNumberValue}')]"
+ArchivedAsset = "//input[@id='show_archived_assets']"
+ArchivedAssetAssetion = "//span[contains(text(),'Archived')]"
+
+AssetNumberSearch = "//div[@id='uniform-col_serial_number']"
+AssetTypeSearch = "//div[@id='uniform-col_title']"
+AssetCategorySearch = "//div[@id='uniform-col_asset_category']"
+AssetSubCategorySearch = "//div[@id='uniform-col_asset_type']"
+AssetOwnershipSearch = "//div[@id='uniform-col_ownership_type']"
+AssetStatusSearch = "//div[@id='uniform-col_status']"
+AssetAvailabilitySearch = "//div[@id='uniform-col_availability']"
+ColumnSubmit = "//a[contains(text(),'submit')]"
+ColumnManageAssertion = "//td[contains(text(),'Manchester')]"
+AssetDetailsBTN = "//a[@title='Details']"
+AssetNumberOnDetailsPage = "//span[contains(text(),'${AssetNumberValue}')]"
+AssetEdit = "//a[@title='Edit']"
+OdometerReadingField = "//input[@id='last_odometer_reading']"
+RegistrationDate = "//input[@id='registration_date']"
+RegDateVal1 = "xpath=/html/body/div[8]/div[1]/table/thead/tr[2]/th[3]"
+RegDateVal2= "//td[contains(text(),'1')]"
+ReplacementDate = "//input[@id='replacement_date']"
+ReplaceDateVal1 = "xpath=/html/body/div[8]/div[1]/table/thead/tr[2]/th[3]"
+ReplaceDateVal2 = "xpath=/html/body/div[8]/div[1]/table/tbody/tr[1]/td[5]"
+SerialNumber = "//input[@id='sr_number']"
+AssetChecks = "//a[@title='Checks']"
+AssetDefects = "//a[@title='Defects']"
+AssetTypeList = "//div[@id='select2-drop']"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
