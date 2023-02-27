@@ -10,7 +10,7 @@
 #MessagesURL         =   "http://fleetmastr.aecordigitalqa.com/messages"
 #LogoutURL           =   "http://fleetmastr.aecordigitalqa.com/auth/logout"
 
-client = 'skanska'
+client = 'shl'
 
 FleetmastrQA        =   "https://uat-"+client+".fleetmastr.com/"
 FMTelematicspage    =   "https://uat-"+client+".fleetmastr.com/telematics/index"
@@ -25,26 +25,29 @@ MessagesURL         =   "http://uat-"+client+".fleetmastr.com/messages"
 LogoutURL           =   "http://uat-"+client+".fleetmastr.com/auth/logout"
 Vehicles            =   "https://uat-"+client+".fleetmastr.com/vehicles"
 VehicleDefetpage    =   "https://uat-"+client+".fleetmastr.com/defects"
-ReportIncidentPage   =   "https://uat-"+client+".fleetmastr.com/incidents"
+ReportIncidentPage  =   "https://uat-"+client+".fleetmastr.com/incidents"
 FleetPlanningpage   =   "https://uat-"+client+".fleetmastr.com/fleet_planning"
 Messagespage        =   "https://uat-"+client+".fleetmastr.com/messages"
 Workshops           =   "https://uat-"+client+".fleetmastr.com/workshops"
 UserManagement      =   "https://uat-"+client+".fleetmastr.com/users"
 VehicleCheksPage    =   "https://uat-"+client+".fleetmastr.com/checks"
 Reportspage         =   "https://uat-"+client+".fleetmastr.com/reports"
-
-
-
+Asseturl            = "https://uat-"+client+".fleetmastr.com/login"
+AssetProfilePage    = "https://uat-"+client+".fleetmastr.com/asset_profiles"
+AddAssetProfile     = "https://uat-"+client+".fleetmastr.com/asset_profiles/create"
+AssetSearchurl      = "https://uat-"+client+".fleetmastr.com/assets"
+AssetDefectURL      =  "https://uat-"+client+".fleetmastr.com/assets/defect"
+AssetChecksURL      =  "https://uat-"+client+".fleetmastr.com/assets/checks"
 
 #=========website========================
 
-UsernameTB          =   '//input[@type="text"]'
-UserID              =   'admin@imastr.com'
+UsernameTB           =   '//input[@type="text"]'
+UserID               =   'admin@imastr.com'
 PasswordTB          =   '//input[@type="password"]'
 UserPWD             =   'aecor2021'
 LoginBTN            =   '//*[@id="register-submit-btn"]'
 AdminDD             =   'xpath=/html/body/div[1]/div/div[2]/div[2]/ul/li[2]/a'
-LogoutUser          =   '//a[@href="https://uat-skanska.fleetmastr.com/auth/logout"]'
+LogoutUser          =   '//a[@href="https://uat-'+client+'.fleetmastr.com/auth/logout"]'
 TelematicsXP        =   '//*[@id="s2id_is_telematics_enabled"]'
 SaveVehicleDetails  =   '//*[@id="saveVehicleBtn"]'
 EntervehicleRegTB   =   '//*[@id="select2-chosen-3"]'
@@ -521,15 +524,12 @@ DateRangeToday          =   "//li[@data-range-key='Today']"
 Reportstab              =   '//*[@id="reports_tab"]'
 ##################################=============================================
 
-#=================Asset=========================
-
-Asseturl = "https://uat-shl.fleetmastr.com/login"
+#=================Assets====================================================
+##============Asset Profile================================================
 Username = "//input[@name='identity']"
 Password = "//input[@id='register_password']"
 PassValue = "aecor2021"
 Loginbutton = "//button[contains(text(),'Login')]"
-AssetProfilePage = "https://uat-shl.fleetmastr.com/asset_profiles"
-AddAssetProfile = "https://uat-shl.fleetmastr.com/asset_profiles/create"
 AssetType = "//input[@id='title']"
 #AssetTypeText = "AecorProfile"
 AssetCategory = "//div[@id='s2id_category_id']"
@@ -562,8 +562,6 @@ AssetSearchInputField2 = "//input[@id='s2id_autogen4_search']"
 AssetClearSearch = "//*[@id='asset-profiles-form']/div/div/div/div[2]/div/div/button[2]"
 ArchivedAssetProfile = "//span[contains(text(),'Show archived asset profiles')]"
 ArchivedStatusItem = "//span[contains(text(),'Archived')]"
-
-
 AssetColumnType = "//div[@id='uniform-col_title']"
 AssetColumnCategory = "//div[@id='uniform-col_asset_category']"
 AssetColumnSubCategory = "//div[@id='uniform-col_asset_type']"
@@ -574,15 +572,13 @@ AssetColumnModelProfileStatus = "//div[@id='uniform-col_profile_status']"
 EditTable1 = "//table[@class='EditTable']"
 EditTable2 = "//td[@class='ColButton EditButton']"
 AssetColumnSubmit = "//a[@id='dData']"
-
 AssetRefresh = "//span[@class='m5 jv-icon jv-reload']"
 AssetDownload = "//Span[@class='m5 jv-icon jv-download']"
 AssetProfileDetails = "//a[@title='Details']"
 AssetProfileEdit = "//a[@title='Edit']"
+##============Asset Search================================================
 
-
-AssetSearchurl = "https://uat-shl.fleetmastr.com/assets"
-AssetAdd = "//a[@href='https://uat-shl.fleetmastr.com/assets/create']"
+AssetAdd = "//a[@href='https://uat-"+client+".fleetmastr.com/assets/create']"
 AssetNumber = "//input[@id='serial_number']"
 AssetTypeSelection = "//div[@id='s2id_asset_profile_id']"
 AssetTypeValueSelection = "//option[contains(text(),'${AssetName}')]"
@@ -637,41 +633,28 @@ AssetChecks = "//a[@title='Checks']"
 AssetDefects = "//a[@title='Defects']"
 AssetTypeList = "//div[@id='select2-drop']"
 
+##============Asset Defect================================================
+AssetNumberDD       =   '//*[@id="select2-chosen-3"]'
+ExportDefectNote    =   'xpath=/html/body/div[2]/div[2]/div/section/div[1]/div/div/a[2]'
+ExportDefectHistory =   'xpath=/html/body/div[2]/div[2]/div/section/div[1]/div/div/a[3]'
+DefectCost   =   '//*[@id="defect-cost-edit"]'
+Defctcostfield      =   '//*[@id="defect-cost"]/span/div/form/div/div[1]/div[1]/input'
+DefectCostSaveBTN   =   '//*[@id="defect-cost"]/span/div/form/div/div[1]/div[2]/button[1]'
+EditAssetdefectSaveBTN  =   "//input[@type='submit']"
+AssetDefectViewBTN  =   "//table[@id='jqGrid']/tbody/tr[2]/td[10]/a[1]"
+AssetCategoryCB     =   "//div[@id='uniform-col_category']"
+AssetAllocatedtoCB  =   "//div[@id='uniform-col_allocatedTo']"
+AssetNumberDD1      =   "xpath=.//span[contains(normalize-space(.), 'Asset number')]"
+AssetDefectAllRegVal    =   "xpath=(.//div[contains(normalize-space(.), 'Manchester')])[last()]"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#=========Asset Check==============================
+ViewAssetcheckicon      =   "//table[@id='jqGrid']/tbody/tr[2]/td[8]/a[1]"
+EditAssetCheckBTN       =   "xpath=.//button[contains(normalize-space(.), 'Edit asset check')]"
+Editcheckoption         =   "xpath=(.//div[contains(., 'Trailer Coupling and Security - Safety Clip')])[10]"
+AssetCheckEditBTN       =   '//*[@id="assets_checks_show"]/div[3]/div/div[1]/div/div[2]/div/div/div/div/div[5]/p/button'
+AssetDefectID       =   "//table[@id='jqGrid']/tbody/tr[2]/td[3]"
+AssetNumberfield    =   "//table[@id='jqGrid']/tbody/tr[2]/td[2]"
+AssetAdvancedSearchTab  =   "//a[contains(text(),'Advanced search')]"
 
 #==========Mobile App===============================
 
