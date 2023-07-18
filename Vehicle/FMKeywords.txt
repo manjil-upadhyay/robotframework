@@ -1,0 +1,28 @@
+*** Settings ***
+Library           Selenium2Library
+Library           openpyxl.reader.excel
+Library           String
+Library           SikuliLibrary
+Library           AppiumLibrary
+Library           AutoItLibrary
+Library           Collections
+Variables         ../Fleetmastr.py
+Library           Selenium2Library
+Library           openpyxl.reader.excel
+Library           String
+Library           SikuliLibrary
+Library           AppiumLibrary
+Library           AutoItLibrary
+Library           Collections
+Variables         ../Fleetmastr.py
+
+*** Keywords ***
+Upcoming count
+    [Arguments]    ${Client}    ${URL}
+    ${CountAnnualService}    Selenium2Library.Get Text    ${Countpagination}
+    log    ${CountAnnualService}
+    Should Contain Any    ${CountAnnualService}    ${DPAnnualserviceCount}
+
+No information
+    [Arguments]    ${Client}    ${URL}
+    Page Should Contain    No information available
